@@ -31,6 +31,7 @@ import { AuthPage } from "./pages/Auth";
 import { BoardClaimPage } from "./pages/BoardClaim";
 import { InviteLandingPage } from "./pages/InviteLanding";
 import { NotFoundPage } from "./pages/NotFound";
+import { InstancePluginsSettings } from "./pages/InstancePluginsSettings";
 import { queryKeys } from "./lib/queryKeys";
 import { useCompany } from "./context/CompanyContext";
 import { useDialog } from "./context/DialogContext";
@@ -298,6 +299,7 @@ export function App() {
           <Route path="instance" element={<Navigate to="/instance/settings" replace />} />
           <Route path="instance/settings" element={<Layout />}>
             <Route index element={<InstanceSettings />} />
+            <Route path="plugins" element={<InstancePluginsSettings />} />
           </Route>
           <Route path="companies" element={<UnprefixedBoardRedirect />} />
           <Route path="issues" element={<UnprefixedBoardRedirect />} />

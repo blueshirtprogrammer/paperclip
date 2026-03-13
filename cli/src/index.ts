@@ -18,6 +18,7 @@ import { registerDashboardCommands } from "./commands/client/dashboard.js";
 import { applyDataDirOverride, type DataDirOptionLike } from "./config/data-dir.js";
 import { loadPaperclipEnvFile } from "./config/env.js";
 import { registerWorktreeCommands } from "./commands/worktree.js";
+import { registerPluginCommands } from "./commands/plugin.js";
 
 const program = new Command();
 const DATA_DIR_OPTION_HELP =
@@ -148,6 +149,8 @@ auth
   .option("--expires-hours <hours>", "Invite expiration window in hours", (value) => Number(value))
   .option("--base-url <url>", "Public base URL used to print invite link")
   .action(bootstrapCeoInvite);
+
+registerPluginCommands(program);
 
 program.parseAsync().catch((err) => {
   console.error(err instanceof Error ? err.message : String(err));

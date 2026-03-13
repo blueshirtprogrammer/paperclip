@@ -57,6 +57,7 @@ export const queryKeys = {
     session: ["auth", "session"] as const,
   },
   instance: {
+    plugins: (instanceId?: string) => ["instance", "plugins", instanceId ?? "default"] as const,
     schedulerHeartbeats: ["instance", "scheduler-heartbeats"] as const,
   },
   health: ["health"] as const,

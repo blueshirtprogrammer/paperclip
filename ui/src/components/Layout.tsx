@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, Moon, Settings, Sun } from "lucide-react";
+import { BookOpen, Moon, Plug, Settings, Sun } from "lucide-react";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "@/lib/router";
 import { CompanyRail } from "./CompanyRail";
 import { Sidebar } from "./Sidebar";
@@ -27,6 +27,7 @@ import { shouldSyncCompanySelectionFromRoute } from "../lib/company-selection";
 import { queryKeys } from "../lib/queryKeys";
 import { cn } from "../lib/utils";
 import { NotFoundPage } from "../pages/NotFound";
+import { SidebarNavItem } from "./SidebarNavItem";
 import { Button } from "@/components/ui/button";
 
 export function Layout() {
@@ -280,6 +281,18 @@ export function Layout() {
                     <Settings className="h-4 w-4" />
                   </Link>
                 </Button>
+              <Button variant="ghost" size="icon-sm" className="text-muted-foreground shrink-0" asChild>
+                <Link
+                  to="/instance/settings/plugins"
+                  aria-label="Plugin settings"
+                  title="Plugin settings"
+                  onClick={() => {
+                    if (isMobile) setSidebarOpen(false);
+                  }}
+                >
+                  <Plug className="h-4 w-4" />
+                </Link>
+              </Button>
                 <Button
                   type="button"
                   variant="ghost"
@@ -330,6 +343,18 @@ export function Layout() {
                     <Settings className="h-4 w-4" />
                   </Link>
                 </Button>
+              <Button variant="ghost" size="icon-sm" className="text-muted-foreground shrink-0" asChild>
+                <Link
+                  to="/instance/settings/plugins"
+                  aria-label="Plugin settings"
+                  title="Plugin settings"
+                  onClick={() => {
+                    if (isMobile) setSidebarOpen(false);
+                  }}
+                >
+                  <Plug className="h-4 w-4" />
+                </Link>
+              </Button>
                 <Button
                   type="button"
                   variant="ghost"
