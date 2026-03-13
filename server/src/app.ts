@@ -115,8 +115,8 @@ export async function createApp(
   api.use(activityRoutes(db));
   api.use(dashboardRoutes(db));
   api.use(sidebarBadgeRoutes(db));
-  api.use(
   api.use(pluginRoutes());
+  api.use(
     accessRoutes(db, {
       deploymentMode: opts.deploymentMode,
       deploymentExposure: opts.deploymentExposure,
