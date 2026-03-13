@@ -1,0 +1,43 @@
+{
+  "operation": "blackbird",
+  "project": "Project Paperclip",
+  "team": "Blackbird AI",
+  "project_lead": "Josh Goodlock",
+  "linked_technologies": ["openclaw", "paperclipai"],
+  "attribution": {
+    "team": "Blackbird AI",
+    "lead": "Josh Goodlock",
+    "org": "openclaw x paperclipai",
+    "github_credit": "Co-authored by Blackbird AI (openclaw x paperclipai)"
+  },
+  "target_categories": ["features", "docs", "skills"],
+  "selected_issues": {
+    "features": [
+      {"number": 803, "title": "feat: add archive/unarchive for projects and agents", "priority": "high"},
+      {"number": 770, "title": "feat: add declarative workflow pipelines with conditional routing", "priority": "high"},
+      {"number": 767, "title": "feat: add cross-agent long-term memory store", "priority": "high"},
+      {"number": 768, "title": "feat: add shared pipeline state on issues for cross-agent data sharing", "priority": "high"},
+      {"number": 766, "title": "feat: add step_execution approval type for pipeline-step gating", "priority": "medium"},
+      {"number": 765, "title": "feat: dismiss failed runs from inbox", "priority": "medium"},
+      {"number": 757, "title": "feat(ui): add user menu with sign out for authenticated mode", "priority": "medium"},
+      {"number": 756, "title": "feat: Add company wide heartbeat time scale slider", "priority": "medium"},
+      {"number": 755, "title": "feat: Show browser notifications when tab is backgrounded", "priority": "low"},
+      {"number": 742, "title": "feat: Zero-config remote access — built-in tunnel", "priority": "low"},
+      {"number": 728, "title": "feat: add remote nodes for distributed agent execution", "priority": "high"},
+      {"number": 702, "title": "feat: practical plugin host foundation with settings surface", "priority": "high"},
+      {"number": 690, "title": "feat: Add Qwen Code CLI adapter (qwen_local)", "priority": "medium"},
+      {"number": 681, "title": "feat: support non-image MIME types in attachments API", "priority": "medium"},
+      {"number": 708, "title": "feat(ui): add agent performance analytics - KPIs, duration trends, and token efficiency", "priority": "high"}
+    ],
+    "docs": [
+      {"number": 792, "title": "docs(zh-CN): remaining simplified chinese localization batch 2", "priority": "medium"},
+      {"number": 791, "title": "docs(zh-CN): priority read docs localization batch 1", "priority": "medium"},
+      {"number": 688, "title": "docs: add simplified and traditional chinese docs", "priority": "medium"},
+      {"number": 749, "title": "How to configure agent skills? (needs documentation)", "priority": "high"}
+    ],
+    "skills": [
+      {"number": 749, "title": "How to configure agent skills?", "priority": "high"},
+      {"number": 702, "title": "feat: practical plugin host foundation with settings surface", "priority": "high"}
+    ]
+  }
+}

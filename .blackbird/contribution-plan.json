@@ -1,0 +1,15 @@
+{
+  "strategy": "contribution_force",
+  "targets": {
+    "bugs": [773, 751, 809, 799, 748],
+    "features": [795, 763, 762, 775, 764],
+    "skills": []
+  },
+  "mode": "dry_run",
+  "pr_template": ".blackbird/pr-template.md",
+  "commit_style": "conventional",
+  "signoff": true,
+  "auto_assign": true,
+  "upstream_fork_target": "https://github.com/paperclipai/paperclip.git",
+  "contribution_branch_prefix": "blackbird/"
+}

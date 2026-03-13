@@ -1,0 +1,79 @@
+{
+  "team": "Blackbird AI",
+  "project": "Operation Blackbird",
+  "codename": "openclaw x paperclip",
+  "lead": "Josh Goodlock",
+  "organization": "Link Technologies",
+  "repo_upstream": "paperclipai/paperclip",
+
+  "agents": {
+    "primary": {
+      "name": "Blackbird-Prime",
+      "model": "claude-sonnet-4-5",
+      "provider": "anthropic",
+      "role": "lead_contributor",
+      "responsibilities": [
+        "repo_reading",
+        "multi_file_reasoning",
+        "code_generation",
+        "docs_writing",
+        "skills_authoring",
+        "pr_description",
+        "commit_messages"
+      ],
+      "context_window": "200K",
+      "temperature": 0.3,
+      "notes": "Primary agent. Claude-native repo (.claude/ dir). Best for agentic tool use, long-context reasoning, and technical writing."
+    },
+    "secondary": {
+      "name": "Blackbird-Kimi",
+      "model": "kimi-k2",
+      "provider": "moonshot",
+      "role": "validator_reviewer",
+      "responsibilities": [
+        "code_review",
+        "output_validation",
+        "logic_checking",
+        "cost_free_gut_check",
+        "secondary_drafts"
+      ],
+      "context_window": "128K",
+      "temperature": 0.2,
+      "notes": "Secondary validator agent. Open source / free. Used to review and challenge Prime's output before PR submission."
+    }
+  },
+
+  "pipeline": {
+    "mode": "dual_agent",
+    "flow": [
+      { "step": 1, "agent": "Blackbird-Prime",  "action": "read_issue_and_repo_context" },
+      { "step": 2, "agent": "Blackbird-Prime",  "action": "draft_contribution" },
+      { "step": 3, "agent": "Blackbird-Kimi",   "action": "validate_and_review_draft" },
+      { "step": 4, "agent": "Blackbird-Prime",  "action": "apply_review_and_finalize" },
+      { "step": 5, "agent": "Blackbird-Prime",  "action": "commit_with_attribution" },
+      { "step": 6, "agent": "Blackbird-Prime",  "action": "generate_pr_description" }
+    ],
+    "on_conflict": "prime_decides",
+    "dry_run": true,
+    "auto_pr": false
+  },
+
+  "attribution": {
+    "commit_signoff": "Signed-off-by: Blackbird AI <blackbird@linktechnologies.ai>",
+    "co_author": "Co-authored-by: Josh Goodlock <josh@linktechnologies.ai>",
+    "team_credit": "Co-authored-by: Blackbird AI (openclaw x paperclipai) <blackbird@linktechnologies.ai>",
+    "footer": "\n---\n🪶 Contributed by **Blackbird AI** — openclaw × paperclipai\n🔗 Link Technologies | Project Lead: **Josh Goodlock**"
+  },
+
+  "contribution_modes": {
+    "issue_select": true,
+    "categories": ["features", "docs", "skills"],
+    "auto_pr": false,
+    "dry_run": true
+  },
+
+  "targets": {
+    "first_issue": 749,
+    "chain": [749, 702, 728, 767]
+  }
+}
