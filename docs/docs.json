@@ -57,6 +57,7 @@
               "guides/agent-developer/how-agents-work",
               "guides/agent-developer/heartbeat-protocol",
               "guides/agent-developer/writing-a-skill",
+              "guides/agent-developer/configuring-agent-skills",
               "guides/agent-developer/task-workflow",
               "guides/agent-developer/comments-and-communication",
               "guides/agent-developer/handling-approvals",
